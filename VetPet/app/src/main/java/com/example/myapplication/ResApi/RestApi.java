@@ -1,6 +1,7 @@
 package com.example.myapplication.ResApi;
 
 
+import com.example.myapplication.models.LoginP;
 import com.example.myapplication.models.RegisterP;
 
 import retrofit2.Call;
@@ -16,5 +17,9 @@ public interface RestApi {
     Call<RegisterP> registerUser (@Field("mailAdres") String mailAdres, @Field("kadi") String kadi, @Field("parola") String parola);
 
 
+    //login işlemi
+    @FormUrlEncoded
+    @POST("/veterinerservis/girisyap.php")
+    Call<LoginP> loginUser (@Field("kadi") String kadi, @Field("parola") String parola);
 
 }
