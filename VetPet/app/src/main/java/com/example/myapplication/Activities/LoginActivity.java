@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.example.myapplication.ResApi.ManagerAll;
+import com.example.myapplication.Utils.GetSharedPreferences;
 import com.example.myapplication.Utils.Warnings;
 import com.example.myapplication.models.LoginP;
 import com.google.android.material.snackbar.Snackbar;
@@ -67,6 +68,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.body().isTrueFalse()){
                     if (response.body().getDurum()==1){
                         Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                        GetSharedPreferences getSharedPreferences = new GetSharedPreferences(LoginActivity.this);
+                        getSharedPreferences.setSession(response.body().getId(),response.body().getKadi(),response.body().getMailAdres());
+                        startActivity(i);
                         finish();
                     }else{
                         Toast.makeText(LoginActivity.this, response.body().getText(), Toast.LENGTH_SHORT).show();
