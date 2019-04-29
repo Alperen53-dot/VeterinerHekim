@@ -5,7 +5,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.myapplication.Fragments.HomeFragment;
 import com.example.myapplication.R;
+import com.example.myapplication.Utils.ChangeFragments;
 import com.example.myapplication.Utils.GetSharedPreferences;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,10 +22,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getFragment();
+        tanımla();
+        kontrol();
 
+    }
+
+    private void getFragment() {
+        ChangeFragments changeFragments = new ChangeFragments(MainActivity.this);
+        changeFragments.change(new HomeFragment());
+    }
+
+    private void tanımla() {
         preferences = new GetSharedPreferences(MainActivity.this);
         sharedPreferences = preferences.getSession();
-        kontrol();
     }
 
     public void kontrol() {

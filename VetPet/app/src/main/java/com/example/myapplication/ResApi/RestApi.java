@@ -2,7 +2,10 @@ package com.example.myapplication.ResApi;
 
 
 import com.example.myapplication.models.LoginP;
+import com.example.myapplication.models.PetModel;
 import com.example.myapplication.models.RegisterP;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -21,5 +24,9 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/veterinerservis/girisyap.php")
     Call<LoginP> loginUser (@Field("kadi") String kadi, @Field("parola") String parola);
+
+    @FormUrlEncoded
+    @POST("/veterinerservis/petlerim.php")
+    Call<List<PetModel>> getPets (@Field("musid") String kadi);
 
 }
