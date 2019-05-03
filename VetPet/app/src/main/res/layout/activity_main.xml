@@ -10,9 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
-        card_view:cardBackgroundColor="#ffb0b0"
-        card_view:cardCornerRadius="10dp"
-        card_view:cardElevation="20dp">
+        card_view:cardBackgroundColor="#003b6f"
+        card_view:cardElevation="2dp">
 
     <FrameLayout
         android:layout_width="match_parent"

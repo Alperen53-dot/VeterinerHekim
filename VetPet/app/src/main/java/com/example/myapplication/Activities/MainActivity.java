@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getFragment();
-        tanımla();
+        tanimla();
         kontrol();
 
     }
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         changeFragments.change(new HomeFragment());
     }
 
-    private void tanımla() {
+    private void tanimla() {
         preferences = new GetSharedPreferences(MainActivity.this);
         sharedPreferences = preferences.getSession();
     }
