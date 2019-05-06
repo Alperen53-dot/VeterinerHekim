@@ -1,6 +1,7 @@
 package com.example.myapplication.ResApi;
 
 
+import com.example.myapplication.models.AnswersModel;
 import com.example.myapplication.models.AskQuestionModel;
 import com.example.myapplication.models.LoginP;
 import com.example.myapplication.models.PetModel;
@@ -33,6 +34,10 @@ public interface RestApi {
     //login işlemi
     @FormUrlEncoded
     @POST("/veterinerservis/sorusor.php")
-    Call<AskQuestionModel> soruSor (@Field("id") String id, @Field("soru") String soru);
+    Call<AskQuestionModel> askQuestion(@Field("id") String id, @Field("soru") String soru);
+
+    @FormUrlEncoded
+    @POST("/veterinerservis/cevaplar.php")
+    Call<List<AnswersModel>> getAnswers(@Field("mus_id") String mus_id);
 
 }

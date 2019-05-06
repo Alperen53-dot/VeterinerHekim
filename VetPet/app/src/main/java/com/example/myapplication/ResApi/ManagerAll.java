@@ -1,6 +1,7 @@
 package com.example.myapplication.ResApi;
 
 
+import com.example.myapplication.models.AnswersModel;
 import com.example.myapplication.models.AskQuestionModel;
 import com.example.myapplication.models.LoginP;
 import com.example.myapplication.models.PetModel;
@@ -39,7 +40,13 @@ public class ManagerAll extends BaseManager {
 
     public Call<AskQuestionModel> soruSor(String id, String soru)
     {
-        Call<AskQuestionModel> x = getRestApi().soruSor(id, soru);
+        Call<AskQuestionModel> x = getRestApi().askQuestion(id, soru);
+        return  x ;
+    }
+
+    public Call<List<AnswersModel>> getAnswers(String mus_id)
+    {
+        Call<List<AnswersModel>> x = getRestApi().getAnswers(mus_id);
         return  x ;
     }
 
