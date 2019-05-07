@@ -2,7 +2,6 @@ package com.example.myapplication.Fragments;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,22 +10,24 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.Adapters.AnswerAdapter;
 import com.example.myapplication.R;
 import com.example.myapplication.ResApi.ManagerAll;
 import com.example.myapplication.Utils.ChangeFragments;
 import com.example.myapplication.Utils.GetSharedPreferences;
 import com.example.myapplication.Utils.Warnings;
-import com.example.myapplication.models.AnswersModel;
-import com.example.myapplication.models.AskQuestionModel;
+import com.example.myapplication.Models.AnswersModel;
+import com.example.myapplication.Models.AskQuestionModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static com.example.myapplication.ResApi.ManagerAll.getInstance;
 
 
 public class HomeFragment extends Fragment {
@@ -37,6 +38,8 @@ public class HomeFragment extends Fragment {
     private ChangeFragments changeFragments;
     private GetSharedPreferences getSharedPreferences;
     private String id;
+    private AnswerAdapter answerAdapter;
+    private List<AnswersModel> answersModelList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -58,6 +61,7 @@ public class HomeFragment extends Fragment {
         getSharedPreferences = new GetSharedPreferences(getActivity());
         cevaplarLayout = view.findViewById(R.id.cevaplarlayout);
         id = getSharedPreferences.getSession().getString("id",null);
+        answersModelList = new ArrayList<>();
     }
 
     public void action()
@@ -81,6 +85,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getAnswers(id);
+
             }
         });
     }
@@ -91,7 +96,11 @@ public class HomeFragment extends Fragment {
             @Override
             public void onResponse(Call<List<AnswersModel>> call, Response<List<AnswersModel>> response) {
                 if (response.body().get(0).isTf()){
-                    Log.i("cevaplar",response.body().toString());
+                    if (response.isSuccessful()){
+                        answersModelList = response.body();
+                        answerAdapter = new AnswerAdapter(answersModelList,getContext());
+                    openAnswerAlert();
+                    }
                 }else{
                     Toast.makeText(getContext(), "Cevap yok", Toast.LENGTH_SHORT).show();
                 }
@@ -122,10 +131,27 @@ public class HomeFragment extends Fragment {
                 //web servis isteği
                 String soru = sorusoredittext.getText().toString();
                 sorusoredittext.setText("");
-                alertDialog.cancel();
                 askQuestion(id,soru,alertDialog);
             }
         });
+        alert.show();
+    }
+
+    public void openAnswerAlert(){
+        LayoutInflater layoutInflater = this.getLayoutInflater();
+        View view = layoutInflater.inflate(R.layout.cevapalertlayout,null);
+
+        RecyclerView recyclerView = view.findViewById(R.id.cevapRecylerview);
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
+        alert.setView(view);
+        alert.setCancelable(true); //boş bir yere tıklayınca kapat
+        final AlertDialog alertDialog = alert.create();
+
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(),1);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(answerAdapter);
+
         alert.show();
     }
 
@@ -135,8 +161,10 @@ public class HomeFragment extends Fragment {
             @Override
             public void onResponse(Call<AskQuestionModel> call, Response<AskQuestionModel> response) {
                 if (response.body().isTf() == true){
-                    Toast.makeText(getContext(), "Sorunuz ilgili hekime gönderildi!", Toast.LENGTH_SHORT).show();
                     alr.cancel();
+                    alr.dismiss();
+                    Toast.makeText(getContext(), "Sorunuz ilgili hekime gönderildi!", Toast.LENGTH_SHORT).show();
+
                 }else {
                     Toast.makeText(getContext(), "İşlem gerçekleşmedi lütfen daha sonra tekrar deneyiniz.", Toast.LENGTH_SHORT).show();
                 }

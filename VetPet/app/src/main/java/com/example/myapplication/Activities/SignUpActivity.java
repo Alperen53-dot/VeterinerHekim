@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.example.myapplication.R;
 import com.example.myapplication.ResApi.ManagerAll;
 import com.example.myapplication.Utils.Warnings;
-import com.example.myapplication.models.RegisterP;
+import com.example.myapplication.Models.RegisterP;
 
 public class SignUpActivity extends AppCompatActivity {
 

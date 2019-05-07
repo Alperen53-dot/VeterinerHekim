@@ -1,4 +1,4 @@
-package com.example.myapplication.models;
+package com.example.myapplication.Models;
 
 public class LoginP {
 	private int durum;

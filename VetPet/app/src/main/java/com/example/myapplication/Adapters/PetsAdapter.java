@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.models.PetModel;
+import com.example.myapplication.Models.PetModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

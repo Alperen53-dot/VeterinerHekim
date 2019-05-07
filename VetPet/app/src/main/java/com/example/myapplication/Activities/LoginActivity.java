@@ -11,7 +11,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.ResApi.ManagerAll;
 import com.example.myapplication.Utils.GetSharedPreferences;
 import com.example.myapplication.Utils.Warnings;
-import com.example.myapplication.models.LoginP;
+import com.example.myapplication.Models.LoginP;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;

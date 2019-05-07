@@ -1,11 +1,12 @@
 package com.example.myapplication.ResApi;
 
 
-import com.example.myapplication.models.AnswersModel;
-import com.example.myapplication.models.AskQuestionModel;
-import com.example.myapplication.models.LoginP;
-import com.example.myapplication.models.PetModel;
-import com.example.myapplication.models.RegisterP;
+import com.example.myapplication.Models.AnswersModel;
+import com.example.myapplication.Models.AskQuestionModel;
+import com.example.myapplication.Models.DeleteAnswerModel;
+import com.example.myapplication.Models.LoginP;
+import com.example.myapplication.Models.PetModel;
+import com.example.myapplication.Models.RegisterP;
 
 import java.util.List;
 
@@ -41,6 +42,12 @@ public class ManagerAll extends BaseManager {
     public Call<AskQuestionModel> soruSor(String id, String soru)
     {
         Call<AskQuestionModel> x = getRestApi().askQuestion(id, soru);
+        return  x ;
+    }
+
+    public Call<DeleteAnswerModel> deleteAnswer(String soruid, String cevapid)
+    {
+        Call<DeleteAnswerModel> x = getRestApi().deleteAnswer(soruid, cevapid);
         return  x ;
     }
 

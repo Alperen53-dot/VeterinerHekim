@@ -12,7 +12,7 @@ import com.example.myapplication.ResApi.ManagerAll;
 import com.example.myapplication.Utils.ChangeFragments;
 import com.example.myapplication.Utils.GetSharedPreferences;
 import com.example.myapplication.Utils.Warnings;
-import com.example.myapplication.models.PetModel;
+import com.example.myapplication.Models.PetModel;
 
 import java.util.ArrayList;
 import java.util.List;
