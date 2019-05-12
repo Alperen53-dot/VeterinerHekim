@@ -4,6 +4,7 @@ package com.example.myapplication.ResApi;
 import com.example.myapplication.Models.AnswersModel;
 import com.example.myapplication.Models.AskQuestionModel;
 import com.example.myapplication.Models.DeleteAnswerModel;
+import com.example.myapplication.Models.KampanyaModel;
 import com.example.myapplication.Models.LoginP;
 import com.example.myapplication.Models.PetModel;
 import com.example.myapplication.Models.RegisterP;
@@ -54,6 +55,12 @@ public class ManagerAll extends BaseManager {
     public Call<List<AnswersModel>> getAnswers(String mus_id)
     {
         Call<List<AnswersModel>> x = getRestApi().getAnswers(mus_id);
+        return  x ;
+    }
+
+    public Call<List<KampanyaModel>> getKampanya()
+    {
+        Call<List<KampanyaModel>> x = getRestApi().getKampanya("g");
         return  x ;
     }
 

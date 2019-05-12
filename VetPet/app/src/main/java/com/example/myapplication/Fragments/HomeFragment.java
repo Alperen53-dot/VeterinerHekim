@@ -34,7 +34,7 @@ public class HomeFragment extends Fragment {
 
 
     public View view;
-    private LinearLayout petlerimLayout,sorusorlinearlayout,cevaplarLayout;
+    private LinearLayout petlerimLayout,sorusorlinearlayout,cevaplarLayout,kampanyaLinearLayout;
     private ChangeFragments changeFragments;
     private GetSharedPreferences getSharedPreferences;
     private String id;
@@ -57,6 +57,7 @@ public class HomeFragment extends Fragment {
     {
         petlerimLayout = view.findViewById(R.id.petlerimLayout);
         sorusorlinearlayout = view.findViewById(R.id.sorusorlinearlayout);
+        kampanyaLinearLayout = view.findViewById(R.id.kampanyaLinearLayout);
         changeFragments = new ChangeFragments(getContext());
         getSharedPreferences = new GetSharedPreferences(getActivity());
         cevaplarLayout = view.findViewById(R.id.cevaplarlayout);
@@ -86,6 +87,12 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 getAnswers(id);
 
+            }
+        });
+        kampanyaLinearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeFragments.change(new KampanyaFragment());
             }
         });
     }
