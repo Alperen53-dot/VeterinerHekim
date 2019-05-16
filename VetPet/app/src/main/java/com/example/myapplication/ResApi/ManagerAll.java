@@ -1,6 +1,8 @@
 package com.example.myapplication.ResApi;
 
 
+import android.util.Log;
+
 import com.example.myapplication.Models.AnswersModel;
 import com.example.myapplication.Models.AsiModel;
 import com.example.myapplication.Models.AskQuestionModel;
@@ -32,8 +34,8 @@ public class ManagerAll extends BaseManager {
         return x;
     }
 
-    public Call<List<PetModel>> getPets(String id) {
-        Call<List<PetModel>> x = getRestApi().getPets(id);
+    public Call<List<PetModel>> getPets(String mus_id) {
+        Call<List<PetModel>> x = getRestApi().getPets(mus_id);
         return x;
     }
 
@@ -63,6 +65,7 @@ public class ManagerAll extends BaseManager {
     }
 
     public Call<List<AsiModel>> getGecmisAsi(String id, String pet_id) {
+        Log.i("ManagerAll'da",id+"-"+pet_id);
         Call<List<AsiModel>> x = getRestApi().getGecmisAsi(id, pet_id);
         return x;
 

@@ -1,6 +1,7 @@
 package com.example.myapplication.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +43,9 @@ public class SanalKarnePetler extends Fragment {
         view = inflater.inflate(R.layout.fragment_user_pets, container, false);
         tanimla();
 
-        getPets("30");
+
+        Log.e("sanalkarnepetlerififii",String.valueOf(mus_id));
+        getPets(mus_id);
         return view;
     }
 
@@ -55,7 +58,9 @@ public class SanalKarnePetler extends Fragment {
         sanalKarnepetler.setLayoutManager(mng);
         changeFragments = new ChangeFragments(getContext());
         getSharedPreferences = new GetSharedPreferences(getActivity());
-        mus_id = getSharedPreferences.getSession().getString("ig",null);
+        mus_id = getSharedPreferences.getSession().getString("id",null);
+        Log.e("sanalkarnepetler",String.valueOf(mus_id));
+
 
     }
     public void getPets(String mus_id)
@@ -69,13 +74,11 @@ public class SanalKarnePetler extends Fragment {
                     petList = response.body();
                     sanalKarnePetAdapter = new SanalKarnePetAdapter(petList,getContext());
                     sanalKarnepetler.setAdapter(sanalKarnePetAdapter);
-                    Toast.makeText(getContext(),"Sistemde kayıtlı "+petList.size()+" petiniz bulunmaktadır.",Toast.LENGTH_LONG).show();
 
 
                 }else
                 {
                     Toast.makeText(getContext(),"Sistemde kayıtlı petiniz bulunmamaktadır.",Toast.LENGTH_LONG).show();
-                    changeFragments.change(new HomeFragment());
                 }
 
             }

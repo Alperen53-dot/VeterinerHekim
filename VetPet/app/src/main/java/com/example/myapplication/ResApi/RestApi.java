@@ -32,7 +32,7 @@ public interface RestApi {
 
     @FormUrlEncoded
     @POST("/veterinerservis/petlerim.php")
-    Call<List<PetModel>> getPets (@Field("musid") String kadi);
+    Call<List<PetModel>> getPets (@Field("musid") String musid);
 
     //login işlemi
     @FormUrlEncoded
