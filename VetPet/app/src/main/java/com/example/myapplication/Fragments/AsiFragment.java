@@ -12,6 +12,7 @@ import com.example.myapplication.Models.AsiModel;
 import com.example.myapplication.R;
 import com.example.myapplication.ResApi.ManagerAll;
 import com.example.myapplication.Utils.ChangeFragments;
+import com.example.myapplication.Utils.GetSharedPreferences;
 import com.squareup.picasso.Picasso;
 import com.squareup.timessquare.CalendarPickerView;
 
@@ -39,6 +40,8 @@ public class AsiFragment extends Fragment {
     private Date today;
     private List<AsiModel> asiList;
     private List<Date> dataList;
+    private String id;
+    private GetSharedPreferences getSharedPreferences;
 
 
     @Override
@@ -63,6 +66,8 @@ public class AsiFragment extends Fragment {
         calendarPickerView.init(today,nextYear.getTime());
         asiList = new ArrayList<>();
         dataList = new ArrayList<>();
+        getSharedPreferences = new GetSharedPreferences(getActivity());
+        id = getSharedPreferences.getSession().getString("id",null);
 
     }
     public void getAsi(){
