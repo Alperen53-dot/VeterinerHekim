@@ -6,13 +6,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.myapplication.Fragments.AsiDetayFragment;
 import com.example.myapplication.Models.PetModel;
 import com.example.myapplication.R;
+import com.example.myapplication.Utils.ChangeFragments;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -34,14 +37,20 @@ public class SanalKarnePetAdapter extends RecyclerView.Adapter<SanalKarnePetAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.sanalKarnePetText.setText(list.get(position).getPetisim().toString());
         holder.sanalKarneBilgiText.setText(list.get(position).getPetisim().toString()+" isimli "+
                 list.get(position).getPettur()+" türüne "+list.get(position).getPetcins()+" cinsine ait petinizin geçmiş" +
                 " aşıları görmek için tıklayınız... ");
 
         Picasso.get().load(list.get(position).getPetresim()).into(holder.sanalKarnePetImage);
-
+        holder.sanalLayoutCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ChangeFragments changeFragments = new ChangeFragments(context);
+                changeFragments.changeWidthParameter(new AsiDetayFragment(),list.get(position).getPetid());
+            }
+        });
     }
 
     @Override
@@ -54,6 +63,7 @@ public class SanalKarnePetAdapter extends RecyclerView.Adapter<SanalKarnePetAdap
     {
         TextView sanalKarnePetText,sanalKarneBilgiText;
         CircleImageView sanalKarnePetImage;
+        CardView sanalLayoutCardView;
         // itemView ile Listview ın her elemanı için Layout ile oluşturduğumuz view tanımlanması işlemi gerçekleiecek
         public ViewHolder(View itemView) {
 
@@ -61,6 +71,7 @@ public class SanalKarnePetAdapter extends RecyclerView.Adapter<SanalKarnePetAdap
             sanalKarneBilgiText = (TextView) itemView.findViewById(R.id.sanalKarneBilgiText);
             sanalKarnePetText = (TextView) itemView.findViewById(R.id.sanalKarnePetText);
             sanalKarnePetImage = (CircleImageView) itemView.findViewById(R.id.sanalKarnePetImage);
+            sanalLayoutCardView = (CardView) itemView.findViewById(R.id.sanalLayoutCardView);
         }
     }
 }
