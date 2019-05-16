@@ -2,9 +2,10 @@ package com.example.myapplication.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.myapplication.Fragments.HomeFragment;
 import com.example.myapplication.R;
@@ -16,9 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private GetSharedPreferences preferences;
-    private Button anasayfaButon;
     private ChangeFragments changeFragments;
-    private Button exit;
+    private ImageView cikisYap, aramaYapButon, anasayfaButon;
 
 
     @Override
@@ -37,8 +37,7 @@ public class MainActivity extends AppCompatActivity {
         changeFragments.change(new HomeFragment());
     }
 
-    public void action()
-    {
+    public void action() {
         anasayfaButon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,12 +45,32 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        cikisYap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GetSharedPreferences getSharedPreferences = new GetSharedPreferences(MainActivity.this);
+                getSharedPreferences.deleteToSession();
+                Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        aramaYapButon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("tel:05458648800"));
+                startActivity(intent);
+            }
+        });
     }
 
     private void tanimla() {
         preferences = new GetSharedPreferences(MainActivity.this);
         sharedPreferences = preferences.getSession();
-        anasayfaButon = findViewById(R.id.anasayfaButon);
+        anasayfaButon = (ImageView) findViewById(R.id.anasayfaButon);
+        cikisYap = (ImageView) findViewById(R.id.cikisYap);
+        aramaYapButon = (ImageView) findViewById(R.id.aramaYapButon);
     }
 
     public void kontrol() {
