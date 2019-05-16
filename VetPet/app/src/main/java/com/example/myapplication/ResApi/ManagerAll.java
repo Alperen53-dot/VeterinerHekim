@@ -2,6 +2,7 @@ package com.example.myapplication.ResApi;
 
 
 import com.example.myapplication.Models.AnswersModel;
+import com.example.myapplication.Models.AsiModel;
 import com.example.myapplication.Models.AskQuestionModel;
 import com.example.myapplication.Models.DeleteAnswerModel;
 import com.example.myapplication.Models.KampanyaModel;
@@ -62,6 +63,11 @@ public class ManagerAll extends BaseManager {
     {
         Call<List<KampanyaModel>> x = getRestApi().getKampanya("g");
         return  x ;
+    }
+
+    public Call<List<AsiModel>> getAsi(String id) {
+        Call<List<AsiModel>> x = getRestApi().getAsi(id);
+        return x;
     }
 
 }

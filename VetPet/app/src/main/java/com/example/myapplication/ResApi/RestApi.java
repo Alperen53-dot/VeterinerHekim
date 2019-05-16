@@ -2,6 +2,7 @@ package com.example.myapplication.ResApi;
 
 
 import com.example.myapplication.Models.AnswersModel;
+import com.example.myapplication.Models.AsiModel;
 import com.example.myapplication.Models.AskQuestionModel;
 import com.example.myapplication.Models.DeleteAnswerModel;
 import com.example.myapplication.Models.KampanyaModel;
@@ -49,5 +50,9 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/veterinerservis/kampanya.php")
     Call<List<KampanyaModel>> getKampanya(@Field("asd") String s);
+
+    @FormUrlEncoded
+    @POST("/veterinerservis/asitakip.php")
+    Call<List<AsiModel>> getAsi(@Field("id") String id);
 
 }
