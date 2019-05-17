@@ -6,7 +6,6 @@ $count=mysqli_num_rows($sorgula);
 
 
 
-
 class petClass
 {
 	public $petid;
@@ -28,7 +27,7 @@ if($count>0)
 		$pet->petid = $bilgi["id"];
 		$pet->petresim = $bilgi["pet_resim"];
 		$pet->petisim = $bilgi["pet_isim"];
-		$pet->pettur = $bilgi["pet_turu"];
+		$pet->pettur = $bilgi["pet_tur"];
 		$pet->petcins = $bilgi["pet_cins"];
 		$pet->tf = true;
 		echo (json_encode($pet));

@@ -4,10 +4,8 @@ include("ayar.php");
  
 $kadi = $_POST["kadi"];//parametre key get ediyoruz
 $parola = $_POST["parola"];
-
 $kontrol = mysqli_query($baglan,"select * from veteriner_kullanicilar where kadi ='$kadi' and parola='$parola'"); 
 $count = mysqli_num_rows($kontrol);
-
 class UserLogin{
 	public $id;
 	public $kadi;
@@ -18,8 +16,6 @@ class UserLogin{
 	public $trueFalse;
 }
 $user = new UserLogin();
-
-
 if ($count > 0) {
 	$parse = mysqli_fetch_assoc($kontrol); //sorgu sonucu gelen verileri bir degiskene atıyoruz.
 	$durum = $parse["durum"];
@@ -27,7 +23,6 @@ if ($count > 0) {
 	$kadi = $parse["kadi"];
 	$mailAdres = $parse["mailAdres"];
 	$parola = $parse["parola"];
-
 	if ($durum == 1) {
 		$user->id=$id;
 		$user->kadi=$kadi;
@@ -47,7 +42,6 @@ if ($count > 0) {
 		$user->trueFalse=false;
 	echo (json_encode($user));
 	}
-
 	
 }else{
 	$user->id=null;
@@ -59,6 +53,4 @@ if ($count > 0) {
 	$user->trueFalse=false;
 	echo (json_encode($user));
 }
-
-
 ?>
