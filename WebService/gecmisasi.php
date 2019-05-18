@@ -1,7 +1,7 @@
 <?php
 include("ayar.php");
-$musid = 7;
-$pet_id = 1;
+$musid = $_POST["id"];
+$pet_id = $_POST["petid"];
 
 $sor =  mysqli_query($baglan, "SELECT a.pet_isim, a.pet_tur, a.pet_cins, a.pet_resim, b.asi_tarih, b.asi_isim FROM veteriner_pet_listesi a INNER JOIN veteriner_takipasi b ON a.id = b.pet_id WHERE a.mus_id ='$musid' AND b.mus_id = '$musid' AND b.asi_durum = '1'AND b.pet_id='$pet_id'");
 
