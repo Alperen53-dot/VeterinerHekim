@@ -43,7 +43,7 @@ public class UserPetsFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_user_pets, container, false);
         tanimla();
 
-        getPets("30");
+        getPets(mus_id);
         return view;
     }
     public void tanimla()
@@ -54,7 +54,7 @@ public class UserPetsFragment extends Fragment {
         petlistrecyclerview.setLayoutManager(mng);
         changeFragments = new ChangeFragments(getContext());
         getSharedPreferences = new GetSharedPreferences(getActivity());
-        mus_id = getSharedPreferences.getSession().getString("ig",null);
+        mus_id = getSharedPreferences.getSession().getString("id",null);
 
     }
     public void getPets(String mus_id)

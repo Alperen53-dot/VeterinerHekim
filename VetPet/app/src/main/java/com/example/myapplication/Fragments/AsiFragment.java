@@ -96,7 +96,7 @@ public class AsiFragment extends Fragment {
                 {
                     ChangeFragments changeFragments = new ChangeFragments(getContext());
                     changeFragments.change(new HomeFragment());
-                    Toast.makeText(getContext(),"PetlerinizeYoktur...",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(),"Petlerinize ait Gelecek Tarihte Aşı Yoktur...",Toast.LENGTH_LONG).show();
                 }
             }
 
