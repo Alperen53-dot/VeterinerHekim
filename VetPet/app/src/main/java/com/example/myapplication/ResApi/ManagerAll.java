@@ -66,7 +66,7 @@ public class ManagerAll extends BaseManager {
 
     public Call<List<AsiModel>> getGecmisAsi(String id, String pet_id) {
         Log.i("ManagerAll'da",id+"-"+pet_id);
-        Call<List<AsiModel>> x = getRestApi().getGecmisAsi(id, pet_id);
+        Call<List<AsiModel>> x = getRestApi().getGecmisAsi(id,pet_id);
         return x;
 
     }

@@ -41,7 +41,7 @@ public class AsiDetayFragment extends Fragment {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.fragment_asi_detay, container, false);
         tanimla();
-        getGecmisAsi();
+        getGecmisAsi(musid,petId);
         return view;
     }
 
@@ -56,7 +56,7 @@ public class AsiDetayFragment extends Fragment {
         asiDetayRecView.setLayoutManager(layoutManager);
         list = new ArrayList<>();
     }
-    public void getGecmisAsi()
+    public void getGecmisAsi(String musid, String petId)
     {
         Call<List<AsiModel>> req = ManagerAll.getInstance().getGecmisAsi(musid,petId);
         req.enqueue(new Callback<List<AsiModel>>() {
