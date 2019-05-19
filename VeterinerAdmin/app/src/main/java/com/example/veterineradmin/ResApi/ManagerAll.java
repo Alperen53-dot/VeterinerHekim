@@ -45,4 +45,9 @@ public class ManagerAll extends BaseManager {
         return x;
     }
 
+    public Call<AsiOnaylaModel> asiIptal(String id) {
+        Call<AsiOnaylaModel> x = getRestApi().asiIptal(id);
+        return x;
+    }
+
 }

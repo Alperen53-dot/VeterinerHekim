@@ -1,7 +1,7 @@
 <?php
 include ("ayar.php");
 $id = $_POST["id"];
-$onayla = mysqli_query($baglan," DELETE `veteriner_takipasi` WHERE id = '$id'");
+$onayla = mysqli_query($baglan," DELETE FROM veteriner_takipasi WHERE id = '$id'");
 
 
 class Result
