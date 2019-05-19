@@ -2,7 +2,7 @@
 include("ayar.php");
 $tarih = $_POST["tarih"];
 
-$sql =  mysqli_query($baglan, "SELECT a.pet_isim,a.pet_tur,a.pet_cins,a.pet_resim,b.asi_isim,b.asi_tarih,b.id AS asiId ,c.kadi,c.telefon FROM veteriner_pet_listesi a INNER JOIN veteriner_takipasi b ON a.id=b.pet_id INNER JOIN veteriner_kullanicilar c ON c.id=b.mus_id WHERE b.asi_durum=0 AND b.asi_tarih = '$tarih'");
+$sql =  mysqli_query($baglan, "SELECT a.pet_isim,a.pet_tur,a.pet_cins,a.pet_resim,b.asi_isim,b.asi_tarih,b.id AS asiId ,c.kadi,c.telefon FROM veteriner_pet_listesi a INNER JOIN veteriner_takipasi b ON a.id=b.pet_id INNER JOIN veteriner_kullanicilar c ON c.id=b.mus_id WHERE b.asi_durum=0 AND b.asi_tarih = '19/05/2019'");
 
 class Takip
 {
