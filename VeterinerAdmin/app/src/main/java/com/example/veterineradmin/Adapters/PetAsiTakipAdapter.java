@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.veterineradmin.Fragments.HomeFragment;
 import com.example.veterineradmin.Fragments.KampanyaFragment;
 import com.example.veterineradmin.Models.AsiOnaylaModel;
 import com.example.veterineradmin.Models.KampanyaModel;
@@ -76,6 +77,13 @@ public class PetAsiTakipAdapter extends RecyclerView.Adapter<PetAsiTakipAdapter.
                 asiOnayla(list.get(position).getAsiid(),position);
             }
         });
+
+        holder.asiTakipCancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                asiIptal(list.get(position).getAsiid(),position);
+            }
+        });
     }
 
 
@@ -125,12 +133,34 @@ public class PetAsiTakipAdapter extends RecyclerView.Adapter<PetAsiTakipAdapter.
             public void onResponse(Call<AsiOnaylaModel> call, Response<AsiOnaylaModel> response) {
                 Toast.makeText(context, response.body().getText(), Toast.LENGTH_SHORT).show();
                 deleteToList(position);
+                if (list.size() == 0){
+                    changeFragments.change(new HomeFragment());
+                }
             }
 
             @Override
             public void onFailure(Call<AsiOnaylaModel> call, Throwable t) {
                 Toast.makeText(context, "Check your internet connection!", Toast.LENGTH_SHORT).show();
 
+            }
+        });
+    }
+
+    public void asiIptal(String id, final int position){
+        Call<AsiOnaylaModel> req = ManagerAll.getInstance().asiIptal(id);
+        req.enqueue(new Callback<AsiOnaylaModel>() {
+            @Override
+            public void onResponse(Call<AsiOnaylaModel> call, Response<AsiOnaylaModel> response) {
+                Toast.makeText(context, response.body().getText(), Toast.LENGTH_SHORT).show();
+                deleteToList(position);
+                if (list.size() == 0){
+                    changeFragments.change(new HomeFragment());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<AsiOnaylaModel> call, Throwable t) {
+                Toast.makeText(context, "Check your internet connection!", Toast.LENGTH_SHORT).show();
             }
         });
     }
