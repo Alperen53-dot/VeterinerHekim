@@ -29,7 +29,7 @@ public interface RestApi {
     Call<KampanyaSilModel> silKampanya(@Field("id") String id);
 
     @FormUrlEncoded
-    @POST("/veterinerservis/veterinerasiTakip.php")
+    @POST("/veterinerservis/veterinerasitakip.php")
     Call<List<PetAsiTakipModel>> getPetAsiTakip(@Field("tarih") String tarih);
 
 
