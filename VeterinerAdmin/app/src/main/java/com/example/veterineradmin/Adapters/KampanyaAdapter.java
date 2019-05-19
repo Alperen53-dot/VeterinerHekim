@@ -38,7 +38,7 @@ public class KampanyaAdapter extends RecyclerView.Adapter<KampanyaAdapter.ViewHo
 
         holder.kampanyaBaslikText.setText(list.get(position).getBaslik().toString());
         holder.kampanyatext.setText(list.get(position).getText().toString());
-        Picasso.get().load(list.get(position).getResim()).into(holder.kampanyaImageView);
+        Picasso.get().load(list.get(position).getResim()).resize(200,200).into(holder.kampanyaImageView);
 
     }
 

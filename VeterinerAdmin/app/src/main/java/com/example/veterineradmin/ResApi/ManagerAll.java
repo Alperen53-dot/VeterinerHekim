@@ -2,6 +2,7 @@ package com.example.veterineradmin.ResApi;
 
 
 
+import com.example.veterineradmin.Models.KampanyaEkleModel;
 import com.example.veterineradmin.Models.KampanyaModel;
 
 import java.util.List;
@@ -18,6 +19,11 @@ public class ManagerAll extends BaseManager {
 
     public Call<List<KampanyaModel>> getKampanya() {
         Call<List<KampanyaModel>> x = getRestApi().getKampanya();
+        return x;
+    }
+
+    public Call<KampanyaEkleModel> addKampanya(String baslik, String icerik, String resim) {
+        Call<KampanyaEkleModel> x = getRestApi().addKampanya(baslik, icerik, resim);
         return x;
     }
 

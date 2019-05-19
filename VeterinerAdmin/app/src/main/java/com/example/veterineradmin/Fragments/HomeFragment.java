@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+
 import androidx.fragment.app.Fragment;
 
 import com.example.veterineradmin.R;
@@ -35,7 +36,7 @@ public class HomeFragment extends Fragment {
 
     public void tanimla(){
         kampanyaLayout = view.findViewById(R.id.kampanyaLayout);
-        changeFragments = new ChangeFragments(getContext());
+        changeFragments = new ChangeFragments(getActivity());
     }
 
     public void clickToLayout(){
