@@ -95,7 +95,7 @@ public class KampanyaFragment extends Fragment {
                 Log.i("kampanyalar", response.body().toString());
                 if (response.body().get(0).isTf()) {
                     kampanyaList = response.body();
-                    kampanyaAdapter = new KampanyaAdapter(kampanyaList, getActivity());
+                    kampanyaAdapter = new KampanyaAdapter(kampanyaList, getContext(),getActivity());
                     kampanyaRecyclerView.setAdapter(kampanyaAdapter);
                 } else {
                     Toast.makeText(getActivity(), "Herhangi bir kampanya bulunmamaktadır.", Toast.LENGTH_LONG).show();
