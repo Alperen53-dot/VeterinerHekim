@@ -50,7 +50,7 @@ public class AsiFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_asi, container, false);
         tanimla();
-        getAsi();
+        getAsi(id);
         clickToCalendar();
         return view;
     }
@@ -70,8 +70,8 @@ public class AsiFragment extends Fragment {
         id = getSharedPreferences.getSession().getString("id",null);
 
     }
-    public void getAsi(){
-        Call<List<AsiModel>> req = ManagerAll.getInstance().getAsi("30");
+    public void getAsi(String id){
+        Call<List<AsiModel>> req = ManagerAll.getInstance().getAsi(id);
         req.enqueue(new Callback<List<AsiModel>>() {
             @Override
             public void onResponse(Call<List<AsiModel>> call, Response<List<AsiModel>> response) {
