@@ -2,6 +2,7 @@ package com.example.veterineradmin.ResApi;
 
 
 
+import com.example.veterineradmin.Models.AsiOnaylaModel;
 import com.example.veterineradmin.Models.KampanyaEkleModel;
 import com.example.veterineradmin.Models.KampanyaModel;
 import com.example.veterineradmin.Models.KampanyaSilModel;
@@ -31,6 +32,10 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/veterinerservis/veterinerasitakip.php")
     Call<List<PetAsiTakipModel>> getPetAsiTakip(@Field("tarih") String tarih);
+
+    @FormUrlEncoded
+    @POST("/veterinerservis/asionayla.php")
+    Call<AsiOnaylaModel> asiOnayla(@Field("id") String id);
 
 
 

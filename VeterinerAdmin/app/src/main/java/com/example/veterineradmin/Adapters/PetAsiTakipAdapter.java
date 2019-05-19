@@ -18,6 +18,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.veterineradmin.Fragments.KampanyaFragment;
+import com.example.veterineradmin.Models.AsiOnaylaModel;
 import com.example.veterineradmin.Models.KampanyaModel;
 import com.example.veterineradmin.Models.KampanyaSilModel;
 import com.example.veterineradmin.Models.PetAsiTakipModel;
@@ -68,6 +69,13 @@ public class PetAsiTakipAdapter extends RecyclerView.Adapter<PetAsiTakipAdapter.
                 ara(list.get(position).getTelefon());
             }
         });
+
+        holder.asiTakipOkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                asiOnayla(list.get(position).getAsiid(),position);
+            }
+        });
     }
 
 
@@ -108,6 +116,23 @@ public class PetAsiTakipAdapter extends RecyclerView.Adapter<PetAsiTakipAdapter.
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("tel:"+numara));
         activity.startActivity(intent);
+    }
+
+    public void asiOnayla(String id, final int position){
+        Call<AsiOnaylaModel> req = ManagerAll.getInstance().asiOnayla(id);
+        req.enqueue(new Callback<AsiOnaylaModel>() {
+            @Override
+            public void onResponse(Call<AsiOnaylaModel> call, Response<AsiOnaylaModel> response) {
+                Toast.makeText(context, response.body().getText(), Toast.LENGTH_SHORT).show();
+                deleteToList(position);
+            }
+
+            @Override
+            public void onFailure(Call<AsiOnaylaModel> call, Throwable t) {
+                Toast.makeText(context, "Check your internet connection!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
 
