@@ -17,7 +17,7 @@ import com.example.veterineradmin.Utils.ChangeFragments;
 public class HomeFragment extends Fragment {
 
     private View view;
-    private LinearLayout kampanyaLayout;
+    private LinearLayout kampanyaLayout, asiTakipLayout;
     private ChangeFragments changeFragments;
 
     @Override
@@ -37,6 +37,8 @@ public class HomeFragment extends Fragment {
     public void tanimla(){
         kampanyaLayout = view.findViewById(R.id.kampanyaLayout);
         changeFragments = new ChangeFragments(getActivity());
+        asiTakipLayout = view.findViewById(R.id.asiTakipLayout);
+
     }
 
     public void clickToLayout(){
@@ -44,6 +46,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 changeFragments.change(new KampanyaFragment());
+            }
+        });
+
+        asiTakipLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeFragments.change(new AsiTakipFragment());
             }
         });
     }
