@@ -19,13 +19,13 @@ import retrofit2.http.POST;
 
 public interface RestApi {
 
-    // Kayıt olma işlemi işin servis bağlantıları ve POST işlemi
+
     @FormUrlEncoded
     @POST("/veterinerservis/kayitol.php")
     Call<RegisterP> registerUser (@Field("mailAdres") String mailAdres, @Field("kadi") String kadi, @Field("parola") String parola);
 
 
-    //login işlemi
+
     @FormUrlEncoded
     @POST("/veterinerservis/girisyap.php")
     Call<LoginP> loginUser (@Field("kadi") String kadi, @Field("parola") String parola);
@@ -34,7 +34,6 @@ public interface RestApi {
     @POST("/veterinerservis/petlerim.php")
     Call<List<PetModel>> getPets (@Field("musid") String musid);
 
-    //login işlemi
     @FormUrlEncoded
     @POST("/veterinerservis/sorusor.php")
     Call<AskQuestionModel> askQuestion(@Field("id") String id, @Field("soru") String soru);

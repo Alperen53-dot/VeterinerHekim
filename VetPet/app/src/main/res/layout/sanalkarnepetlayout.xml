@@ -38,7 +38,9 @@
                 android:id="@+id/sanalKarnePetImage"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+
+                />
 
             <TextView
                 android:id="@+id/sanalKarneBilgiText"
@@ -48,6 +50,7 @@
                 android:gravity="center"
                 android:textColor="#122f3d"
                 android:textSize="15dp"
+
                 android:textStyle="bold" />
 
 

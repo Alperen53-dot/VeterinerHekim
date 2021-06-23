@@ -53,7 +53,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.ViewHolder> {
     {
         TextView petlayoutpetname,petlayoutcinsname,petlayoutturname;
         CircleImageView petlayoutpetimage;
-        // itemView ile Listview ın her elemanı için Layout ile oluşturduğumuz view tanımlanması işlemi gerçekleiecek
+
         public ViewHolder(View itemView) {
 
             super(itemView);

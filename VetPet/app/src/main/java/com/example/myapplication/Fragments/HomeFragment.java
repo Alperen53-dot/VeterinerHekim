@@ -167,7 +167,7 @@ public class HomeFragment extends Fragment {
 
         AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
         alert.setView(view);
-        alert.setCancelable(true); //boş bir yere tıklayınca kapat
+        alert.setCancelable(true);
         final AlertDialog alertDialog = alert.create();
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(),1);

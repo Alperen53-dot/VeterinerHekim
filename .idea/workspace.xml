@@ -1,79 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4e39e0e-f60e-4360-a894-3439d7e992f2" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="b4e39e0e-f60e-4360-a894-3439d7e992f2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/VetPet/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VetPet/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VeterinerAdmin/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VeterinerAdmin/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Veritabanı/msekinci.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Veritabanı/veteriner_cevaplar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Veritabanı/veteriner_sorular.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/java/com/example/myapplication/Activities/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/java/com/example/myapplication/Activities/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/java/com/example/myapplication/Fragments/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/java/com/example/myapplication/Fragments/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/java/com/example/myapplication/ResApi/BaseUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/java/com/example/myapplication/ResApi/BaseUrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/java/com/example/myapplication/ResApi/RestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/java/com/example/myapplication/ResApi/RestApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/answer.png" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/answer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/answer1.png" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/answer1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/button_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/button_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/calendar.png" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/calendar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/call.png" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/call.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/circle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/edittextbackground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/edittextbackground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/email_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/email_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/exit.png" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/exit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/drawable-v24/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VetPet/app/src/main/res/layout/sanalkarnepetlayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VetPet/app/src/main/res/layout/sanalkarnepetlayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VeterinerAdmin/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VeterinerAdmin/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VeterinerAdmin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VeterinerAdmin/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VeterinerAdmin/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VeterinerAdmin/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VeterinerAdmin/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/VeterinerAdmin/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/aktifet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/asiiptal.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/asionayla.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/asitakip.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/ayar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/cevapla.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/cevaplar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/cevapsil.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/gecmisasi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/girisyap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/kampanya.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/kampanyaekle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/kampanyaidli.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/kampanyasil.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/kayitol.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/petlerim.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/resimler/922291407286387.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/resimler/kedimama.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/resimler/kurt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/resimler/vankedisi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/resimler/yem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/sorular.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/sorusor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/veterinerasitakip.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-962714249">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="VetPet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VetPet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VetPet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VetPet" type="462c0819:PsiDirectoryNode" />
-              <item name="VetPet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VetPet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VetPet" type="462c0819:PsiDirectoryNode" />
-              <item name="WebService" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectId" id="1siqxCAy83cLcO7Rcbow9I4S9dp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VetPetUygulamasi/VetPet" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VeterinerPet" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -115,7 +124,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
       <listeners />
@@ -124,6 +134,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -137,26 +148,10 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32980832" />
-      <window_info id="Structure" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Captures" order="0" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Palette&#9;" />
-    </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1623154272873">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1623154272873" />
   </component>
 </project>

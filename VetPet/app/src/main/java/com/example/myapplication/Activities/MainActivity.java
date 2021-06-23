@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("tel:05458648800"));
+                intent.setData(Uri.parse("tel:05324005653"));
                 startActivity(intent);
             }
         });
